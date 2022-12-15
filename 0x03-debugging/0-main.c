@@ -1,9 +1,13 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include "main.h"
+/**
+ * main -Tests function
+ * Return:0
+ */
+int main(void)
+{
+	int i;
 
-
-#include <stdio.h>
-
-void positive_or_negative(int i);
-
-#endif /* MAIN_H */
+	i = 0;
+	positive_or_negative(i);
+	return (0);
+}
