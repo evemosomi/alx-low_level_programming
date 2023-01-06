@@ -13,4 +13,5 @@ int _evaluate(int i, int n);
 int evaluate_num(int num, int counter);
 int pl(char *s, int x);
 int _strlen_recursion(char *s);
+int wildcmp(char *s1, char *s2);
 #endif
