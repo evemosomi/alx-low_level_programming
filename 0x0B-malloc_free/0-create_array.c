@@ -7,28 +7,13 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	char buff;
+	char *buff;
 	unsigned int pstn;
 
-	if (size == 0)
-	{
+	buff = malloc(sizeof(char) * size);
+	if (size == 0 || buff == NULL)
 		return (NULL);
-	}
-
-	buff = (char *) malloc(size * sizeof(c));
-
-	if (buff == 0)
-	{
-		return (NULL);
-	}
-	else
-	{
-		pstn = 0;
-		while (pstn < size)
-		{
-			*(buff + pstn) = c;
-			pstn++;
-		}
+	for (pstn = 0; pstn < size; pstn++)
+		buff[pstn] = c;
 		return (buff);
-	}
 }
